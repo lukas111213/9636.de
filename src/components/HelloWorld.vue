@@ -3,22 +3,54 @@
     <div class="centerize">
       <number :color="design()" @open="openA(letters6, 1)" number="6">
         <template #action>
-          <letter :color="design()" v-if="show1" :letters="letters6" :active="active" :index="1"/>
+          <letter
+            style="position: absolute; margin: 0;"
+            class="let"
+            :color="design()"
+            v-if="show1"
+            :letters="letters6"
+            :active="active"
+            :index="1"
+          />
         </template>
       </number>
       <number :color="design()" @open="openA(letters9, 2)" number="9">
         <template #action>
-          <letter :color="design()" v-if="show2" :letters="letters9" :active="active" :index="2"/>
+          <letter
+            style="position: absolute; margin: 0"
+            class="let"
+            :color="design()"
+            v-if="show2"
+            :letters="letters9"
+            :active="active"
+            :index="2"
+          />
         </template>
       </number>
       <number :color="design()" @open="openA(letters3, 3)" number="3">
         <template #action>
-          <letter :color="design()" v-if="show3" :letters="letters3" :active="active" :index="3"/>
+          <letter
+            style="position: absolute; margin: 0"
+            class="let"
+            :color="design()"
+            v-if="show3"
+            :letters="letters3"
+            :active="active"
+            :index="3"
+          />
         </template>
       </number>
       <number :color="design()" @open="openA(letters6, 4)" number="6">
         <template #action>
-          <letter :color="design()" v-if="show4" :letters="letters6" :active="active" :index="4"/>
+          <letter
+            style="position: absolute; margin: 0;"
+            class="let"
+            :color="design()"
+            v-if="show4"
+            :letters="letters6"
+            :active="active"
+            :index="4"
+          />
         </template>
       </number>
     </div>
@@ -252,9 +284,16 @@ export default {
   transform: translate(-50%, -50%);
 }
 
+.let {
+  transform: translate(15px, -7px);
+}
+
 @media screen and (max-width: 600px) {
   .swipe-button {
     top: 72%;
+  }
+  .let {
+    transform: translate(4px, -8.8px);
   }
 }
 </style>

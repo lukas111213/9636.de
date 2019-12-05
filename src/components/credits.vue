@@ -1,21 +1,22 @@
 <template>
   <div class="credits">
     <span>
-      6936.de Passboard - an oyen.de service 12.2019, code & design
+      6936.de Passboard - an oyen.de service 12.2019
+      <br>code & design
       <a
         @mouseover="active('first', color)"
         @mouseout="out('first', color)"
         id="first"
-        :style="{color: color[0]}"
+        :style="{color: '#549EBF'}"
         :href="lukas"
       >Lukas Kreutzer</a>, idea
       <a
         @mouseover="active('second', color)"
         @mouseout="out('second', color)"
         id="second"
-        :style="{color: color[0]}"
+        :style="{color: '#549EBF'}"
         :href="oyen"
-      >Jörg Oyen</a>.
+      >Jörg Oyen</a>
     </span>
   </div>
 </template>
@@ -40,7 +41,7 @@ export default {
       const ele = id === "first" ? "first" : "second";
       var link = document.getElementById(ele);
 
-      link.style.color = data[0];
+      link.style.color = "#549EBF";
     }
   }
 };
@@ -53,11 +54,12 @@ a {
 span {
   color: #fff;
   margin: 0;
+  line-height: 1.3;
 }
 .credits {
   font-size: 0.94rem;
   position: absolute;
-  bottom: 0.4%;
+  bottom: 2.5%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, 0%);

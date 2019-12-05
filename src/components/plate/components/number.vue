@@ -21,7 +21,6 @@
 </template>
 
 <script>
-const color_design = require("@/helpers/index");
 export default {
   props: {
     number: { type: String },
@@ -102,7 +101,7 @@ a {
   width: auto;
   outline: none !important;
   background: #2249ca;
-  border-radius: 100%;
+  border-radius: 10px;
   box-shadow: 0 0px 8px 0.4px rgba(0, 0, 0, 0.8);
   margin: auto 17px;
 }
@@ -131,7 +130,7 @@ a {
     cursor: pointer;
     line-height: auto;
     font-size: 1.9rem;
-    border-radius: 100%;
+    border-radius: 10px;
     box-shadow: 0 0 2px 0.3px rgba(0, 0, 0, 0.3);
     user-select: none;
     &:active {

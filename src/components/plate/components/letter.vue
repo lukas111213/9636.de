@@ -24,34 +24,35 @@
 export default {
   props: ["letters", "active", "index", "color"],
   mounted() {
-    document.querySelectorAll(".letter").forEach(ciclegraph => {
-      let circles = ciclegraph.querySelectorAll(".circle");
-      let angle = 360,
-        dangle = 140 / circles.length;
-      for (let i = 0; i < circles.length; ++i) {
-        let circle = circles[i];
-        angle += dangle;
-        circle.style.transform = `rotate(${angle}deg) translate(${ciclegraph.clientWidth /
-          2}px) rotate(-93deg)`;
-      }
-    });
+    // document.querySelectorAll(".letter").forEach(ciclegraph => {
+    //   let circles = ciclegraph.querySelectorAll(".circle");
+    //   let angle = 360,
+    //     dangle = 140 / circles.length;
+    //   for (let i = 0; i < circles.length; ++i) {
+    //     let circle = circles[i];
+    //     angle += dangle;
+    //     circle.style.transform = `rotate(${angle}deg) translate(${ciclegraph.clientWidth /
+    //       2}px) rotate(-93deg)`;
+    //   }
+    // });
   }
 };
 </script>
 
 <style lang="scss">
 .circle {
-  top: 54%;
-  width: 4px;
-  position: absolute;
-  height: 3px;
+  width: 100px;
+  position: relativ;
+  height: 30px;
   border-radius: 50%;
 }
 
 .letter span {
+  padding: 0;
   font-size: 1rem;
   letter-spacing: 4px;
-  color: red;
+  line-height: 2;
+  color: #fff;
 }
 .colorize {
   color: blue;
